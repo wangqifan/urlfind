@@ -1,8 +1,8 @@
 # urlfind
 配置
 ----
-首先需要下载chormedriver   http://npm.taobao.org/mirrors/chromedriver/
-查看自己电脑chorme浏览器版本，然后去下对应的chormedriver版本  下载好 解压放到C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe
+首先需要下载IEdriver  在IE中导入证书 
+https://github.com/wangqifan/urlfind/blob/master/ca-certificate-rsa.cer
 
 依赖
 ----
