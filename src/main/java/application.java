@@ -22,14 +22,14 @@ public class application {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-        System.setProperty("webdriver.ie.driver","C:\\\\Windows\\\\System32\\\\IEDriverServer.exe");
+        System.setProperty("webdriver.ie.driver","C:\\Windows\\System32\\IEDriverServer.exe");
         WebDriver driver = new InternetExplorerDriver(capabilities);
         proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
 
 
 
-        urlfind find=new urlfindimp();
-        System.out.println(find.findvideourl(proxy,driver,"https://v.qq.com/x/page/k1427jh9hdv.html"));
+        urlfind find=new urlfindimp2();
+        find.findvideourl(proxy,driver,"http://news.cctv.com/2018/07/04/VIDEF8VtLTIVABYKHdHh5vjF180704.shtml");
         driver.close();
         System.out.println("---------------end--------------");
     }
