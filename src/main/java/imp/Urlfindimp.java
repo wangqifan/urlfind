@@ -1,3 +1,5 @@
+package imp;
+
 import net.lightbody.bmp.BrowserMobProxy;
 import net.lightbody.bmp.core.har.Har;
 import net.lightbody.bmp.core.har.HarEntry;
@@ -9,11 +11,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Urlfindimp implements urlfind {
-    public List<String> findvideourl(BrowserMobProxy proxy, WebDriver driver, String Htmlurl)
+    String[] patterns;
+    public List<String> findvideourl(BrowserMobProxy proxy, WebDriver driver, String Htmlurl)throws Exception
     {
         List<String> res=new LinkedList<String>();
         proxy.newHar("https://v.com/");
@@ -35,7 +43,6 @@ public class Urlfindimp implements urlfind {
             }
             return res;
         }
-      //  System.out.println(driver.getTitle());
         boolean flag=false;
         for(int i=0;i<15;i++)
         {
@@ -54,12 +61,23 @@ public class Urlfindimp implements urlfind {
                 String url = request.getUrl();
                 if(url.endsWith ( ".m3u8" ))
                 {
-                       String  m3u8url = url;
+                        String m3u8url=url;
                         flag = true;
-                        res.add(m3u8url);
+                        URL urltemp=new URL(url);
+                        HttpURLConnection conn = (HttpURLConnection)urltemp.openConnection ();
+                        conn.connect ();
+                        InputStream in = (InputStream)conn.getInputStream ();
+                        InputStreamReader isr = new InputStreamReader ( in );
+                        BufferedReader br = new BufferedReader ( isr );
+                        String line;
+                        while((line = br.readLine ())!= null){
+                        if(line.endsWith ( ".ts" )){
+                            res.add ( m3u8url.substring ( 0, m3u8url.length ()-9 )+line );
+                        }
+                        }
                         break;
                 }
-                if(url.contains(".mp4?sdtfrom"))
+                if(ismp4url(url))
                 {
                     res.add(url);
                     flag=true;
@@ -70,5 +88,17 @@ public class Urlfindimp implements urlfind {
         }
         proxy.removeHeader("https://v.com/");
         return res;
+    }
+    public  void setparttern(String pattern)
+    {
+        patterns=pattern.split(",");
+    }
+    boolean ismp4url(String url)
+    {
+        for(String str:patterns)
+        {
+            if(!url.contains(str))return false;
+        }
+        return true;
     }
 }

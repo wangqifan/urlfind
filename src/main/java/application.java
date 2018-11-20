@@ -1,3 +1,5 @@
+import imp.urlfind;
+import imp.urlfindimpform3u8;
 import net.lightbody.bmp.BrowserMobProxy;
 import net.lightbody.bmp.BrowserMobProxyServer;
 import net.lightbody.bmp.client.ClientUtil;
@@ -8,8 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 public class application {
     public static void  main(String[] args)throws Exception {
@@ -23,14 +24,24 @@ public class application {
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
         System.setProperty("webdriver.ie.driver","C:\\Windows\\System32\\IEDriverServer.exe");
+
+
         WebDriver driver = new InternetExplorerDriver(capabilities);
+        driver.manage().deleteAllCookies();//删除所有的cookie
         proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
+        try {
+            urlfindType type=urlfindType.UrlfindTencent;
+            urlfind find = new urlfindFactory().geturlfind(type);
+            List<String> urls= find.findvideourl(proxy, driver, "https://v.qq.com/x/page/b0770m5x1nv.html");
 
-
-
-        urlfind find=new urlfindimp2();
-        find.findvideourl(proxy,driver,"http://news.cctv.com/2018/07/04/VIDEF8VtLTIVABYKHdHh5vjF180704.shtml");
-        driver.close();
-        System.out.println("---------------end--------------");
+            for(String url:urls)
+            {
+                System.out.println(url);
+            }
+        }
+        finally {
+            proxy.stop();
+            driver.close();
+        }
     }
 }

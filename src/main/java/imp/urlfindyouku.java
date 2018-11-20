@@ -1,4 +1,4 @@
-
+package imp;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,12 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import net.lightbody.bmp.BrowserMobProxy;
 
-public class urlfindyouku implements  urlfind{
+public class urlfindyouku implements urlfind {
 	public List<String> findvideourl(BrowserMobProxy proxy,WebDriver driver,String Htmlurl) {
 		List<String> res = new LinkedList<String>();
-		/*
+
 		driver.get(Htmlurl );
-		//�ýӿڽ����һ��������վ����Ϊ�ſ�iframe��ʽ
+
 		//"http://bbs.chinahpsy.com/thread-37906-1-1.html";
 		//"http://www.afzhan.com/video/play/t1/list_c1202_p1.html";
 		
@@ -35,7 +35,6 @@ public class urlfindyouku implements  urlfind{
 		        break;
 			}
 		}
-		*/
 		return res;
 	}
 }
