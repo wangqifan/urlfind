@@ -18,6 +18,11 @@ public class urlfindFactory {
               ((UrlfindTencent) res).setparttern(".mp4?sdtfrom");
               return res;
           }
+          else if(type==urlfindType.youkuembed)
+          {
+              urlfind res= new youkuembed();
+              return res;
+          }
           else
           {
               urlfind res= new Urlfindimp();
