@@ -25,6 +25,8 @@ import org.w3c.css.sac.ElementSelector;
 public class urlfindyouku implements urlfind {
 	public List<String> findvideourl(BrowserMobProxy proxy,WebDriver driver,String Htmlurl) {
         List<String> result = new LinkedList<String>();
+		//"http://bbs.chinahpsy.com/thread-37906-1-1.html";
+		//"http://www.afzhan.com/video/play/t1/list_c1202_p1.html";
 
 /*
 	    String htmlstr=httputil.getresoure(Htmlurl);
