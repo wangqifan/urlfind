@@ -24,6 +24,12 @@ public class urlfindFactory {
               urlfind res= new urlfindDajiang();
               return res;
           }
+          else if(type==urlfindType.UrlfindTencentEmbed)
+          {
+              urlfind res= new UrlfindTencentEmbed();
+              ((UrlfindTencentEmbed) res).setparttern(".mp4?sdtfrom");
+              return res;
+          }
           else
           {
               urlfind res= new Urlfindimp();

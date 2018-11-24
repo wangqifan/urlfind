@@ -4,7 +4,8 @@ public enum urlfindType {
     UrlfindTencent(1),
     Urlfindimp(2),
     urlfindYoukuEmbed(3),
-    urlfindDajiang(4);
+    urlfindDajiang(4),
+    UrlfindTencentEmbed(5);
 
     private int value;
     urlfindType(int value) {
