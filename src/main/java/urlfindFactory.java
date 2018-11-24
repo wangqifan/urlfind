@@ -23,6 +23,11 @@ public class urlfindFactory {
               urlfind res= new urlfindYoukuEmbed();
               return res;
           }
+          else if(type==urlfindType.urlfindDajiang)
+          {
+              urlfind res= new urlfindDajiang();
+              return res;
+          }
           else
           {
               urlfind res= new Urlfindimp();

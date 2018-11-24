@@ -15,7 +15,6 @@ import net.lightbody.bmp.BrowserMobProxy;
 public class urlfindYoukuiframe implements urlfind {
 	public List<String> findvideourl(BrowserMobProxy proxy,WebDriver driver,String Htmlurl) {
         List<String> result = new LinkedList<String>();
-		//"http://bbs.chinahpsy.com/thread-37906-1-1.html";
 		//"http://www.afzhan.com/video/play/t1/list_c1202_p1.html";
         //driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
         proxy.newHar("youku");
