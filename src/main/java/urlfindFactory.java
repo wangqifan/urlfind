@@ -8,9 +8,9 @@ public class urlfindFactory {
           {
               return new urlfindimpform3u8();
           }
-          else if (type==urlfindType.urlfindyouku)
+          else if (type==urlfindType.urlfindYoukuiframe)
           {
-              return new urlfindyouku();
+              return new urlfindYoukuiframe();
           }
           else if(type==urlfindType.UrlfindTencent)
           {
@@ -18,9 +18,9 @@ public class urlfindFactory {
               ((UrlfindTencent) res).setparttern(".mp4?sdtfrom");
               return res;
           }
-          else if(type==urlfindType.youkuembed)
+          else if(type==urlfindType.urlfindYoukuEmbed)
           {
-              urlfind res= new youkuembed();
+              urlfind res= new urlfindYoukuEmbed();
               return res;
           }
           else

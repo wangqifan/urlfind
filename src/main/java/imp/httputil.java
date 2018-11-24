@@ -56,7 +56,8 @@ public class httputil {
             String[] temp=resource.split("\\r?\\n", -1);
             for(String item:temp)
             {
-                if(item.indexOf('#')<=2)res.add(item);
+                int index=item.indexOf('#');
+                if(index<0||index>5)res.add(item);
             }
         }
         return res;

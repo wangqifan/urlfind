@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c96d5c-68c3-44a0-9041-5c15fde084c1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/imp/httputil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/imp/youkuembed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imp/UrlfindTencent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imp/UrlfindTencent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imp/urlfindyouku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imp/urlfindyouku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imp/httputil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imp/httputil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imp/urlfindyouku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imp/urlfindYoukuiframe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imp/youkuembed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imp/urlfindYoukuEmbed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/urlfindFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/urlfindFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/urlfindType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/urlfindType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imp/UrlfindTencent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imp/UrlfindTencent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/imp/urlfindyouku.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imp/urlfindyouku.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/urlfindFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/urlfindFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/urlfindType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/urlfindType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imp/httputil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/imp/httputil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imp/urlfindyouku.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/imp/youkuembed.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,8 +45,8 @@
       <file leaf-file-name="application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="37" column="113" selection-start-line="37" selection-start-column="113" selection-end-line="37" selection-end-column="113" />
+            <state relative-caret-position="126">
+              <caret line="35" column="59" lean-forward="true" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,53 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urlfindFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/urlfindFactory.java">
+      <file leaf-file-name="urlfindYoukuiframe.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/imp/urlfindYoukuiframe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UrlfindTencent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/imp/UrlfindTencent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="42" column="19" selection-start-line="20" selection-start-column="7" selection-end-line="42" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="youkuembed.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/imp/youkuembed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urlfindyouku.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/imp/urlfindyouku.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="77" column="25" selection-start-line="73" selection-start-column="24" selection-end-line="77" selection-end-column="25" />
+            <state relative-caret-position="137">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,8 +69,21 @@
       <file leaf-file-name="urlfindType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/urlfindType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="68">
+              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urlfindYoukuEmbed.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/imp/urlfindYoukuEmbed.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#760#768#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,6 +107,7 @@
       <find>ifr</find>
       <find>result</find>
       <find>if</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,13 +136,15 @@
         <option value="$PROJECT_DIR$/src/main/java/imp/Urlfindimp.java" />
         <option value="$PROJECT_DIR$/src/main/java/imp/HttpClientUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/imp/httputil.java" />
         <option value="$PROJECT_DIR$/src/main/java/imp/UrlfindTencent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/imp/httputil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/imp/youkuembed.java" />
         <option value="$PROJECT_DIR$/src/main/java/imp/urlfindyouku.java" />
         <option value="$PROJECT_DIR$/src/main/java/urlfindType.java" />
         <option value="$PROJECT_DIR$/src/main/java/urlfindFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/imp/urlfindYoukuiframe.java" />
         <option value="$PROJECT_DIR$/src/main/java/application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/imp/youkuembed.java" />
+        <option value="$PROJECT_DIR$/src/main/java/imp/urlfindYoukuEmbed.java" />
       </list>
     </option>
   </component>
@@ -216,6 +187,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,15 +219,20 @@
               <item name="networkfilder" type="b2602c69:ProjectViewProjectNode" />
               <item name="networkfilder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="imp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="networkfilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="networkfilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,11 +348,13 @@
       <workItem from="1542988490117" duration="6219000" />
       <workItem from="1542995120892" duration="2069000" />
       <workItem from="1542997583461" duration="453000" />
+      <workItem from="1543033943185" duration="2669000" />
+      <workItem from="1543037108677" duration="4626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83988000" />
+    <option name="totallyTimeSpent" value="91283000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,22 +367,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32733223" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.7034796" weight="0.47954175" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.68759453" weight="0.37806875" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.113464445" side_tool="true" visible="true" weight="0.47954175" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.12934947" side_tool="true" visible="true" weight="0.28968903" />
       <window_info anchor="right" id="Maven Projects" order="3" sideWeight="0.49590835" visible="true" weight="0.012859304" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8865355" weight="0.502455" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.87065053" visible="true" weight="0.28968903" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34266263" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35325265" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -421,32 +403,32 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23076923" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.64484453" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30786687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23076923" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49834985" visible="true" weight="0.012859304" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Coverage" order="9" sideWeight="0.50165015" side_tool="true" visible="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49834985" visible="true" weight="0.012859304" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.64484453" />
+      <window_info active="true" anchor="right" id="Coverage" order="9" sideWeight="0.50165015" side_tool="true" visible="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -783,13 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/imp/httputil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -797,43 +772,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/urlfindType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="37" column="113" selection-start-line="37" selection-start-column="113" selection-end-line="37" selection-end-column="113" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/imp/urlfindyouku.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="77" column="25" selection-start-line="73" selection-start-column="24" selection-end-line="77" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/urlfindFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/imp/UrlfindTencent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="37">
           <caret line="42" column="19" selection-start-line="20" selection-start-column="7" selection-end-line="42" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -841,12 +789,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/imp/youkuembed.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/imp/httputil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        <state relative-caret-position="649">
+          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/urlfindType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="35" column="59" lean-forward="true" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/imp/urlfindYoukuiframe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/imp/urlfindYoukuEmbed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#760#768#0" expanded="true" />
           </folding>
         </state>
       </provider>

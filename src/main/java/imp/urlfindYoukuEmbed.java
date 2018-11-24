@@ -18,31 +18,49 @@ import org.openqa.selenium.WebElement;
 import java.util.LinkedList;
 import java.util.List;
 
-public class youkuembed implements  urlfind {
+
+//适用于Embed youku或者是 iframe
+
+public class urlfindYoukuEmbed implements  urlfind {
     public List<String> findvideourl(BrowserMobProxy proxy, WebDriver driver, String Htmlurl) {
         List<String> result = new LinkedList<String>();
 	    String htmlstr=httputil.getresoure(Htmlurl);
 	    Document doc=Jsoup.parse(htmlstr);
         Elements eles=doc.getElementsByTag("embed");
-        if(eles.size()==0)return result;
-        Element element=eles.first();
-        String src=element.attr("src");
-         // http://player.youku.com/player.php/sid/XMjk4NzkxMTA4/v.swf
-        int lastindex1=src.lastIndexOf("/");
-        int lastindex2=src.lastIndexOf("/",lastindex1-1);
-        String videoid=src.substring(lastindex2+1,lastindex1);
-        String  youkuurl= " http://vo.youku.com/v_show/id_XMjk4NzkxMTA4==.html".replace("XMjk4NzkxMTA4",videoid) ;
+        String youkuurl="";
+        if(eles.size()!=0) {
+            Element element = eles.first();
+            String src = element.attr("src");
+            //http://player.youku.com/player.php/sid/XMjk4NzkxMTA4/v.swf
+            int lastindex1 = src.lastIndexOf("/");
+            int lastindex2 = src.lastIndexOf("/", lastindex1 - 1);
+            String videoid = src.substring(lastindex2 + 1, lastindex1);
+            youkuurl = " http://vo.youku.com/v_show/id_XMjk4NzkxMTA4==.html".replace("XMjk4NzkxMTA4", videoid);
+        }
+        else
+        {
+            eles=doc.getElementsByTag("iframe");
+            if(eles.size()==0)return  result;
+            for(Element e:eles)
+            {
+                if(e.attr("src").contains("youku"))
+                {
+                    youkuurl = e.attr("src");
+                    break;
+                }
+            }
 
+        }
         proxy.newHar("https://youku.com/");
         driver.get(youkuurl);
         List<WebElement> es  = driver.findElements(By.tagName("video"));
-
-        WebElement ele=es.get(0);
-        String  videosrc= ele.getAttribute("src");
-        if(videosrc.substring(0,4).equals("http"))
-        {
-            result.add(videosrc);
-            return result;
+        if(es.size()!=0) {
+            WebElement ele = es.get(0);
+            String videosrc = ele.getAttribute("src");
+            if (videosrc.substring(0, 4).equals("http")) {
+                result.add(videosrc);
+                return result;
+            }
         }
         boolean flag=false;
         for(int i=0;i<15;i++) {
@@ -58,8 +76,7 @@ public class youkuembed implements  urlfind {
 
                 HarRequest request = entrie.getRequest();
                 String url = request.getUrl();
-                System.out.println(url);
-                if (url.contains("m3u8")) {
+                if (url.contains("m3u8?")) {
                     System.out.println(url);
                     String m3u8url = url;
                     List<String> templist = httputil.geturlfromm3u8(m3u8url);

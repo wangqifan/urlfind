@@ -1,10 +1,10 @@
 public enum urlfindType {
 
     urlfindimpform3u8(0),
-    urlfindyouku(1),
+    urlfindYoukuiframe(1),
     UrlfindTencent(2),
     Urlfindimp(3),
-    youkuembed(4);
+    urlfindYoukuEmbed(4);
 
     private int value;
     urlfindType(int value) {
