@@ -37,11 +37,6 @@
              <artifactId>selenium-java</artifactId>
              <version>3.3.0</version>
          </dependency>
-         <dependency>
-             <groupId>net.lightbody.bmp</groupId>
-             <artifactId>mitm</artifactId>
-             <version>2.1.4</version>
-         </dependency>
          <!-- https://mvnrepository.com/artifact/org.json/json -->
          <dependency>
              <groupId>org.json</groupId>
@@ -59,6 +54,12 @@
              <groupId>org.apache.httpcomponents</groupId>
              <artifactId>httpclient</artifactId>
              <version>4.5.3</version>
+         </dependency>
+
+         <dependency>
+             <groupId>cn.wanghaomiao</groupId>
+             <artifactId>JsoupXpath</artifactId>
+             <version>2.2</version>
          </dependency>
 
      </dependencies>

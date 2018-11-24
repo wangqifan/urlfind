@@ -30,6 +30,11 @@ public class urlfindFactory {
               ((UrlfindTencentEmbed) res).setparttern(".mp4?sdtfrom");
               return res;
           }
+          else if(type==urlfindType.urlfindXpath)
+          {
+              urlfind res= new urlfindXpath();
+              return res;
+          }
           else
           {
               urlfind res= new Urlfindimp();

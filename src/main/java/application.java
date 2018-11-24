@@ -33,9 +33,9 @@ public class application {
         driver.manage().deleteAllCookies();//删除所有的cookie
         proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
         try {
-            urlfindType type=urlfindType.UrlfindTencentEmbed;
+            urlfindType type=urlfindType.urlfindXpath;
             urlfind find = new urlfindFactory().geturlfind(type);
-            List<String> urls= find.findvideourl(proxy, driver, "http://www.cena.com.cn/5g/20180928/96011.html");
+            List<String> urls= find.findvideourl(proxy, driver, "https://ibaotu.com/sucai/518673.html");
 
             for(String url:urls)
             {
