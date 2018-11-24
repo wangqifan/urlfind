@@ -27,15 +27,15 @@ public class application {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-      //  System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-       // WebDriver driver = new ChromeDriver(capabilities);
-        WebDriver driver = new InternetExplorerDriver(capabilities);
+        System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver(capabilities);
+       // WebDriver driver = new InternetExplorerDriver(capabilities);
         driver.manage().deleteAllCookies();//删除所有的cookie
         proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
         try {
-            urlfindType type=urlfindType.urlfindDajiang;
+            urlfindType type=urlfindType.urlfindYoukuEmbed;
             urlfind find = new urlfindFactory().geturlfind(type);
-            List<String> urls= find.findvideourl(proxy, driver, "http://bbs.chinahpsy.com/thread-26586-1-1.html");
+            List<String> urls= find.findvideourl(proxy, driver, "http://www.afzhan.com/video/play/t1/list_c1201_p1.html");
 
             for(String url:urls)
             {

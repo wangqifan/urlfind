@@ -45,13 +45,19 @@ public class urlfindYoukuEmbed implements  urlfind {
             {
                 if(e.attr("src").contains("youku"))
                 {
-                    youkuurl = e.attr("src");
+                    String iframeurl = e.attr("src");
+                    int index=iframeurl.indexOf("vid=");
+                    String viedoid=iframeurl.substring(index+4);
+                    youkuurl = " http://vo.youku.com/v_show/id_XMjk4NzkxMTA4==.html".replace("XMjk4NzkxMTA4", viedoid);
                     break;
                 }
+
+                //http://www.mtnets.com/youku/player.html?vid=XMzg5MzY4NjM3Ng
             }
 
         }
         proxy.newHar("https://youku.com/");
+        driver.manage().window().maximize();
         driver.get(youkuurl);
         List<WebElement> es  = driver.findElements(By.tagName("video"));
         if(es.size()!=0) {
@@ -77,7 +83,6 @@ public class urlfindYoukuEmbed implements  urlfind {
                 HarRequest request = entrie.getRequest();
                 String url = request.getUrl();
                 if (url.contains("m3u8?")) {
-                    System.out.println(url);
                     String m3u8url = url;
                     List<String> templist = httputil.geturlfromm3u8(m3u8url);
                     for (String viedourl : templist) {
@@ -85,6 +90,29 @@ public class urlfindYoukuEmbed implements  urlfind {
                     }
                     flag = true;
                     break;
+                }
+                if(url.contains("get.json"))
+                {
+                    try {
+                        String jsonstr = httputil.getresoure(url);
+                        JSONObject obj = new JSONObject(jsonstr);
+                        JSONObject data = obj.getJSONObject("data");
+                        JSONArray stream = data.getJSONArray("stream");
+                        for (int index = 0; index < stream.length(); ++index) {
+                            JSONObject item = stream.getJSONObject(index);
+                            String m3u8url = item.getString("m3u8_url");
+                            List<String> templist = httputil.geturlfromm3u8(m3u8url);
+                            for (String viedourl : templist) {
+                                result.add(viedourl);
+                            }
+                        }
+                    }
+                    catch (Exception E)
+                    {
+                        continue;
+                    }
+                        flag = true;
+                        break;
                 }
             }
             if (flag) break;

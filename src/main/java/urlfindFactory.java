@@ -8,10 +8,6 @@ public class urlfindFactory {
           {
               return new urlfindimpform3u8();
           }
-          else if (type==urlfindType.urlfindYoukuiframe)
-          {
-              return new urlfindYoukuiframe();
-          }
           else if(type==urlfindType.UrlfindTencent)
           {
               urlfind res= new UrlfindTencent();
