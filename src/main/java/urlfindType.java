@@ -7,7 +7,8 @@ public enum urlfindType {
     urlfindDajiang(4),
     UrlfindTencentEmbed(5),
     urlfindStatic(6),
-    urlfindifeng(7);
+    urlfindifeng(7),
+    urlfindregex(8);
 
     private int value;
     urlfindType(int value) {

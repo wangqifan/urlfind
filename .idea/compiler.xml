@@ -9,5 +9,8 @@
         <module name="networkfilder" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="networkfilder" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

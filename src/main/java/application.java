@@ -25,17 +25,17 @@ public class application {
         proxy.start(0);
         Proxy seleniumProxy = ClientUtil.createSeleniumProxy(proxy);
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
+       capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-        System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver(capabilities);
-        //WebDriver driver = new InternetExplorerDriver(capabilities);
+        System.setProperty("webdriver.ie.driver","C:\\Windows\\System32\\IEDriverServer.exe");
+      // WebDriver driver = new ChromeDriver(capabilities);
+        WebDriver driver = new InternetExplorerDriver(capabilities);
         driver.manage().deleteAllCookies();//删除所有的cookie
-        proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
+       // proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
         try {
-            urlfindType type=urlfindType.urlfindifeng;
+            urlfindType type=urlfindType.urlfindregex;
             urlfind find = new urlfindFactory().geturlfind(type);
-            List<String> urls= find.findvideourl(proxy, driver, "http://v.ifeng.com/201811/video_28687966.shtml");
+            List<String> urls= find.findvideourl(proxy, driver, "http://www.21ic.com/evm/video/201612/695003.htm");
 
             for(String url:urls)
             {

@@ -40,6 +40,11 @@ public class urlfindFactory {
               urlfind res= new urlfindifeng();
               return res;
           }
+          else if(type==urlfindType.urlfindregex)
+          {
+              urlfind res= new urlfindregex();
+              return res;
+          }
           else
           {
               urlfind res= new Urlfindimp();
