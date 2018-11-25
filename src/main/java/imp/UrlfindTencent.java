@@ -17,7 +17,6 @@ public class UrlfindTencent implements urlfind {
         List<String> res=new ArrayList<String>();
         proxy.newHar("https://v.com/");
         driver.get(Htmlurl);
-        System.out.println(driver.getTitle());
         boolean flag=false;
         for(int i=0;i<15;i++) {
             try {

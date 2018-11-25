@@ -6,7 +6,8 @@ public enum urlfindType {
     urlfindYoukuEmbed(3),
     urlfindDajiang(4),
     UrlfindTencentEmbed(5),
-    urlfindXpath(6);
+    urlfindStatic(6),
+    urlfindifeng(7);
 
     private int value;
     urlfindType(int value) {

@@ -27,15 +27,15 @@ public class application {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-       // System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-        //WebDriver driver = new ChromeDriver(capabilities);
-        WebDriver driver = new InternetExplorerDriver(capabilities);
+        System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver(capabilities);
+        //WebDriver driver = new InternetExplorerDriver(capabilities);
         driver.manage().deleteAllCookies();//删除所有的cookie
         proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
         try {
-            urlfindType type=urlfindType.urlfindXpath;
+            urlfindType type=urlfindType.urlfindifeng;
             urlfind find = new urlfindFactory().geturlfind(type);
-            List<String> urls= find.findvideourl(proxy, driver, "https://ibaotu.com/sucai/518673.html");
+            List<String> urls= find.findvideourl(proxy, driver, "http://v.ifeng.com/201811/video_28687966.shtml");
 
             for(String url:urls)
             {

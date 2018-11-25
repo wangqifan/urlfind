@@ -8,7 +8,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.openqa.selenium.WebDriver;
-import org.seimicrawler.xpath.JXDocument;
 
 
 import java.util.LinkedList;
@@ -16,7 +15,7 @@ import java.util.List;
 
 
 ///html/body/section/video
-public class urlfindXpath implements urlfind {
+public class urlfindStatic implements urlfind {
   //  private String xpath="";
     public List<String> findvideourl(BrowserMobProxy proxy, WebDriver driver, String Htmlurl) {
         List<String> result = new LinkedList<String>();
