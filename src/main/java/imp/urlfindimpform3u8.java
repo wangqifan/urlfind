@@ -5,6 +5,8 @@ import net.lightbody.bmp.core.har.Har;
 import net.lightbody.bmp.core.har.HarEntry;
 import net.lightbody.bmp.core.har.HarLog;
 import net.lightbody.bmp.core.har.HarRequest;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
 
 
@@ -27,7 +29,6 @@ public class urlfindimpform3u8 implements urlfind {
         //需要返回的List
         List<String> list = new ArrayList<String> (  );
         for(int i=0;i<15;i++){
-            boolean flag = false;
             try {
                 Thread.sleep(5000);
             }catch(InterruptedException e){
@@ -36,38 +37,21 @@ public class urlfindimpform3u8 implements urlfind {
             Har har = proxy.getHar ();
             HarLog log = har.getLog ();
             List<HarEntry> entries = log.getEntries ();
-            String m3u8url = "";
-
-            for (HarEntry entry:entries){
+            for (HarEntry entry:entries) {
                 HarRequest request = entry.getRequest();
-                String url = request.getUrl ();
-                if(url.endsWith ( ".m3u8" ))
-                {
-                    m3u8url = url;
-                    flag = true;
-                    break;
-
+                String url = request.getUrl();
+                if (url.contains("getHttpVideoInfo")) {
+                    String jsonstr=httputil.getresoure(url);
+                    JSONObject obj = new JSONObject(jsonstr);
+                    JSONArray data = obj.getJSONObject("video").getJSONArray("chapters");
+                    for (int index = 0; index < data.length(); ++index) {
+                        JSONObject item =data.getJSONObject(index);
+                         String chapterurl= item.getString("url");
+                         list.add(chapterurl);
+                    }
+                    return list;
                 }
             }
-            if(!flag) {
-                continue;
-            }
-            System.out.println ( "m3u8"+i+m3u8url );
-            //使用URLconnect 下载m3u8 读取response
-            URL urltemp = new URL ( m3u8url );
-            HttpURLConnection conn = (HttpURLConnection)urltemp.openConnection ();
-            conn.connect ();
-            InputStream in = (InputStream)conn.getInputStream ();
-            InputStreamReader isr = new InputStreamReader ( in );
-            BufferedReader br = new BufferedReader ( isr );
-            String line;
-            while((line = br.readLine ())!= null){
-                if(line.endsWith ( ".ts" )){
-                    list.add ( m3u8url.substring ( 0, m3u8url.length ()-9 )+line );
-                }
-            }
-            break;
-
         }
         return list;
 
